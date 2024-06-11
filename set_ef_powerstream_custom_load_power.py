@@ -142,14 +142,14 @@ def set_ef_powerstream_custom_load_power(SerialNumber=None,TotalPower=None,Autom
     CalPermanentWatts = cur_permanentWatts + TotalPower - TotalPowerOffSet
 
     try:
-        # allow only value between 0-600
-        if 0 <= CalPermanentWatts <= 600:
+        # allow only value between 0-800
+        if 0 <= CalPermanentWatts <= 800:
             NewPermanentWatts = CalPermanentWatts * 10
         else:
             NewPermanentWatts= 0
 
-        if CalPermanentWatts > 600:
-            NewPermanentWatts = 600 * 10
+        if CalPermanentWatts > 800:
+            NewPermanentWatts = 800 * 10
 
         if not Automation:
             NewPermanentWatts= 0
